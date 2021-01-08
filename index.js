@@ -1,13 +1,23 @@
 let click_count = 0;
+const title = document.getElementById("title");
+const BASE_CLR = title.style.color;
+const PINK_CLR = "#f02475";
 function logResize()
 {
-    let elem = document.getElementById("bob");
+    let elem = title;
     click_count++;
-    if(click_count > 50){
+    if(click_count > 5){
         elem.innerHTML = "Yamete oniisan, you clicked too much!!";
+        const current_clr = elem.style.color;
+        if(BASE_CLR === current_clr){
+            elem.style.color = PINK_CLR;
+        }else{
+            elem.style.color = BASE_CLR;
+        }
     }else{
         elem.innerHTML = "You clicked: " + click_count;
     }
+
 }
 
-window.addEventListener("click",logResize);
+title.addEventListener("click",logResize);
