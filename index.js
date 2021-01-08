@@ -15,7 +15,7 @@ function logResize()
             elem.style.color = BASE_CLR;
         }
     }else{
-        elem.innerHTML = "You clicked: " + click_count;
+        elem.innerHTML = "click me harder!! " +"(" + click_count +")";
     }
 
 }
