@@ -2,7 +2,7 @@ let click_count = 0;
 const title = document.getElementById("title");
 const BASE_CLR = title.style.color;
 const PINK_CLR = "#f02475";
-function logResize()
+function clickHandler()
 {
     let elem = title;
     click_count++;
@@ -20,4 +20,13 @@ function logResize()
 
 }
 
-title.addEventListener("click",logResize);
+let prevKeys = "";
+function printKeyPressed(elem)
+{
+    prevKeys += elem.key;
+    title.innerHTML = "You pressed: " + prevKeys;
+}
+
+title.addEventListener("click",clickHandler);
+
+window.addEventListener("keydown", printKeyPressed);
