@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: grey;
 }
 
 h1{
@@ -7,6 +7,27 @@ h1{
     transition: color 0.5s ease-in-out;
 }
 
+.clock {
+    color white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
 .clicked {
     color: #f5425a;
+}
+
+.form {
+    display: none;
+}
+
+.greeting {
+    text-align: center;
+    color: pink;
+    display: none;
+}
+
+.showing {
+    display: block;
 }
