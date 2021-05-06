@@ -33,9 +33,9 @@ function printTodo(basket, list)
 {
 	if(basket.length <= 0){
 		console.log("to do basket is empty, getting from local storage.");
-		getAllTodo(basket);
+		getAllTodo();
 	}
-	for(element of basket)
+	for(element of todoBasket)
 	{
 		const li = document.createElement("li");
 		const delBtn = document.createElement("button");
@@ -53,10 +53,10 @@ function printTodo(basket, list)
 }
 
 // loads todo objects from Local Storage into passed array
-function getAllTodo(basket)
+function getAllTodo()
 {
 	const loadTodos = localStorage.getItem(TODO_LS);
-	basket = JSON.parse(loadTodos);
+	todoBasket = JSON.parse(loadTodos);
 }
 
 //	Takes a string and an array
