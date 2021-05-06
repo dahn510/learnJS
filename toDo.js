@@ -96,11 +96,11 @@ function handleTodoSubmit(event)
 
 function init()
 {
+	todoForm.addEventListener("submit", handleTodoSubmit);
 	todoBasket = [];
 	getAllTodo();
 	resetTodoList(todoList);
 	printTodo(todoBasket, todoList);
-	todoForm.addEventListener("submit", handleTodoSubmit);
 }
 
 init();
