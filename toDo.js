@@ -3,7 +3,7 @@ const todoInput = todoForm.querySelector("input");
 const todoList = document.querySelector(".js-todoList");
 // Local storage name
 const TODO_LS = "todos";
-let todoBasket = [];
+let todoBasket;
 
 // #I wish I could find better way to empty the list in HTML
 // 		but I'm not that concerned about it.... yet....
@@ -96,6 +96,7 @@ function handleTodoSubmit(event)
 
 function init()
 {
+	todoBasket = [];
 	getAllTodo();
 	resetTodoList(todoList);
 	printTodo(todoBasket, todoList);
