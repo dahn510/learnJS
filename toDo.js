@@ -56,7 +56,9 @@ function printTodo(basket, list)
 function getAllTodo()
 {
 	const loadTodos = localStorage.getItem(TODO_LS);
-	todoBasket = JSON.parse(loadTodos);
+	if(loadTodos !== null){
+		todoBasket = JSON.parse(loadTodos);
+	}
 }
 
 //	Takes a string and an array
@@ -96,7 +98,6 @@ function handleTodoSubmit(event)
 
 function init()
 {
-	todoBasket = [];
 	todoForm.addEventListener("submit", handleTodoSubmit);
 	getAllTodo();
 	resetTodoList(todoList);
