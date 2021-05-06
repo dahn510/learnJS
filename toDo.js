@@ -96,8 +96,8 @@ function handleTodoSubmit(event)
 
 function init()
 {
-	todoForm.addEventListener("submit", handleTodoSubmit);
 	todoBasket = [];
+	todoForm.addEventListener("submit", handleTodoSubmit);
 	getAllTodo();
 	resetTodoList(todoList);
 	printTodo(todoBasket, todoList);
