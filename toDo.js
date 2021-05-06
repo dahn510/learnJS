@@ -2,7 +2,7 @@ const todoForm = document.querySelector(".js-toDoForm");
 const todoInput = todoForm.querySelector("input");
 const todoList = document.querySelector(".js-todoList");
 // Local storage name
-const TODO_LS = "todos"
+const TODO_LS = "todos";
 let todoBasket = [];
 
 // #I wish I could find better way to empty the list in HTML
