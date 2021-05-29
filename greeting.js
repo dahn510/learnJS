@@ -37,7 +37,7 @@ function getName()
 
 function greetUser(name)
 {
-    greetingTitle.innerText = `How are you? ${name}`;
+    greetingTitle.innerText = `How are you? \n${name}`;
     form.classList.remove(SHOWING_CN);
     greetingTitle.classList.add(SHOWING_CN);
     saveName(name);
