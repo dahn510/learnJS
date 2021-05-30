@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Learning JS</title>
-		<meta charset="utf-8"/>
+        <link rel="icon" href="icon.svg">
+
+        <!-- Font from Google -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link 
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+        <!-- CSS -->
         <link rel="stylesheet" href="index.css"/>
     </head>
+
     <body>
-        <div class="clock-js clock">
-            <h1 class="hour-js">
-                00:00
-            </h1>
-        </div>
-        <form class="js-form form">
-            <input type="text" placeholder="What is your name?"/>
-        </form>
-        <h1 class="js-greeting greeting"></h1>
-		<form class="js-toDoForm form">
-			<input type="text" placeholder="Write your todo"/>
-		</form>
-		<ul class="js-todoList">
-		</ul>
-        <script src="greeting.js"></script>
-        <script src="clock.js"></script>
-		<script src="toDo.js"></script>
+        <header>
+            <div class="clock-js clock">
+                <h1 class="hour-js">
+                    00:00
+                </h1>
+            </div>
+        </header>
+
+
+        <main>
+            <form class="js-form form">
+                <input type="text" placeholder="What is your name?"/>
+            </form>
+            <h1 class="js-greeting greeting"></h1>
+            <form class="js-toDoForm form">
+                <input type="text" placeholder="Write your task"/>
+            </form>
+            <ul class="js-todoList">
+            </ul>
+            <script src="greeting.js"></script>
+            <script src="clock.js"></script>
+            <script src="toDo.js"></script>
+        </main>
     </body>
 </html>

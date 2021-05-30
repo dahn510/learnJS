@@ -1,33 +1,121 @@
-body{
-    background-color: grey;
+body {
+    display: grid;
+
+    color: #ffffff;
+    font-size: 18px; 
+    font-family: 'Roboto', sans-serif;
+    
+    background: #1B1B1B;
+    margin: 0 auto;     
+
+    max-width: 100vw;   
 }
 
-h1{
-    color: white;
-    transition: color 0.5s ease-in-out;
+header {
+    display: grid;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
 }
 
-.clock {
-    color white;
-    margin-top: 40px;
-    margin-bottom: 40px;
+main {
+    display: grid;
+
+    justify-content: center;
+    align-items: center;
+
+    color: inherit;
+}
+
+.greeting {
+    margin: 0 0 40px 0;
+    color: #FF3E5F;
+    display: none;
     text-align: center;
 }
 
-.clicked {
-    color: #f5425a;
+.form {
+    margin: 0 auto 0 auto;
+}
+
+input {
+    text-align: center;
+    color: inherit;
+    font-size: inherit;
+    
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+
+    background: none;
+    padding: 5px;
+    margin: 0 0 10px 0;
+
+    width: 400px;
+}
+
+input:focus {
+    outline: none;
 }
 
 .js-form {
     display: none;
 }
 
-.greeting {
-    text-align: center;
-    color: pink;
-    display: none;
-}
-
 .showing {
     display: block;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: grid;
+    grid-template-columns: 1fr 40px;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #FF3E5F;
+}
+
+button {
+    color: #FF3E5F;
+
+    border: none;
+    border-radius: 0;
+    background: none;
+
+    position: relative;
+
+    cursor: pointer;    /* Turn the cursor into a tiny hand when hover */
+
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+button:hover {
+    color: #ffffff;
+}
+
+button:before {
+    content: "";
+	position: absolute;
+
+    bottom: 0; /* Change to "bottom" to make the effect flow from the bottom */
+	left: 0;
+	height: 100%;
+	width: 100%;
+
+    background: #FF3E5F;
+    border-radius: 50% 50% 0 0; /* Change if want to do different flow direction */
+    height: 0%;
+
+    z-index: -1;
+
+    transition: all 0.5s;
+}
+
+button:hover:before {
+    height: 200%;
 }
