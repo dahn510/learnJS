@@ -7,3 +7,5 @@ Clock
 Welcome msg
 
 Click [here](https://dahn510.github.io/learnJS "learnJS") to try it out
+
+Style Wizard Anh helped styling this webpage
